@@ -2,9 +2,9 @@
 
 | Team Member Name | Email Address       |
 |------------------|---------------------|
-| [Name 1]         | [Email 1]           |
+| Ruoqi Wu         | neorqi@engineering.upenn.edu           |
 
-**GitHub Repository URL:** 
+**GitHub Repository URL:** https://github.com/RuoqiWu/lab0-zephyr-ruoqi.git
 
 ## 1. Sample Header
 
