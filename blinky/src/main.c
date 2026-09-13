@@ -15,7 +15,8 @@
 /* The devicetree node identifier for the "led0" alias. */
 //#define LED0_NODE DT_ALIAS(led0)
 #define LED5180_NODE DT_ALIAS(led5180)
-#define BUTTON_NODE DT_ALIAS(sw0)
+//#define BUTTON_NODE DT_ALIAS(sw0)
+#define BUTTON5180_NODE DT_ALIAS(button5180)
 
 
 /*
@@ -23,7 +24,8 @@
  * See the sample documentation for information on how to fix this.
  */
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED5180_NODE, gpios);
-static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(BUTTON_NODE, gpios);
+static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(BUTTON5180_NODE, gpios);
+//static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(BUTTON_NODE, gpios);
 
 int main(void)
 {
