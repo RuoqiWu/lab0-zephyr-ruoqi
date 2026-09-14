@@ -15,13 +15,15 @@
 
 ## 4. Kconfig
 
-**4.1 What are the levels of log statements?**
+## 6. Printing vs. Logging
 
-   Zephyr provides four main logging levels: Error (`LOG_ERR`), Warning (`LOG_WRN`), Information (`LOG_INF`), and Debug (`LOG_DBG`). The corresponding numeric levels are 1, 2, 3, and 4. Level 0 disables logging.
-**4.2 What is the difference between `prj.conf` and `menuconfig`?**
+**6.1 Build and capture both implementations**
 
-   `prj.conf` is a persistent, text-based file that defines the application's desired Kconfig settings. `menuconfig` is an interactive interface for viewing and changing Kconfig options and their dependencies. Menuconfig changes normally affect the generated build configuration and should be copied into `prj.conf` if they need to remain after a pristine build.
+Printf:
+![printf](./img/6.1printf.png)
 
-**4.3 How do you check that the symbols in `prj.conf` are set after building? Why?**
+Logger:
+![printf](./img/6.2logger.png)
 
-   After building, the symbols can be checked in the generated `build/blinky/zephyr/.config` file. This file contains the final resolved configuration after application, board, dependency, and default settings have been combined. Checking it confirms that the requested options were enabled without being changed or disabled by dependencies.
+**6.2 Video**
+

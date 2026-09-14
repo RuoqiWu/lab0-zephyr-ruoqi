@@ -1,0 +1,17 @@
+mainmenu "Sum Application Configuration"
+
+choice SUM_IMPLEMENTATION
+	prompt "Select the sum output implementation"
+	default SUM_PRINT
+
+config SUM_PRINT
+	bool "Use printk implementation"
+	select PRINTK
+
+config SUM_LOG
+	bool "Use Logger implementation"
+	select LOG
+
+endchoice
+
+source "Kconfig.zephyr"

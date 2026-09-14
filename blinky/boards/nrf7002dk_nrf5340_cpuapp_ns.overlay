@@ -5,3 +5,32 @@
 		button5180 = &button0;
 	};
 };
+
+/* This application boots TF-M directly, without MCUboot. */
+/delete-node/ &boot_partition;
+/delete-node/ &slot0_partition;
+
+&flash0 {
+	partitions {
+		slot0_partition: partition@0 {
+			compatible = "zephyr,mapped-partition";
+			label = "image-0";
+			reg = <0x0 0x80000>;
+			ranges = <0x0 0x0 0x80000>;
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			slot0_s_partition: partition@0 {
+				compatible = "zephyr,mapped-partition";
+				label = "image-0-secure";
+				reg = <0x0 0x50000>;
+			};
+
+			slot0_ns_partition: partition@50000 {
+				compatible = "zephyr,mapped-partition";
+				label = "image-0-nonsecure";
+				reg = <0x50000 0x30000>;
+			};
+		};
+	};
+};
