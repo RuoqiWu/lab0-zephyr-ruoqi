@@ -27,3 +27,18 @@ Logger:
 
 **6.2 Video**
 
+
+## 7. Ztest for Unit Testing
+
+**7.2**
+![7.2](./img/7.2.png)
+
+## 8. Adding a Peripheral (BME280)
+
+**8.1**
+
+![8.1](./img/8.1.png)
+
+**8.2**
+![8.2](./img/8.2.png)
+

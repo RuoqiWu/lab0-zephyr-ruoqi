@@ -1,8 +1,0 @@
-*** Booting nRF Connect SDK v3.4.0-99553055607b ***
-*** Using Zephyr OS v4.4.0-bf801e4e3d19 ***
-[00:00:05.291,168] <err> sum_log: Example error-level message
-[00:00:05.291,198] <wrn> sum_log: Example warning-level message
-[00:00:05.291,229] <inf> sum_log: SUM_LOG: 3 + 5 = 8
-[00:00:05.291,229] <dbg> sum_log: sum_log: Example debug-level message
-[00:00:05.291,259] <inf> sum_log: Input values
-                                  03 00 00 00 05 00 00 00                          |........         

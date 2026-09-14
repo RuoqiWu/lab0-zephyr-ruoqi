@@ -14,4 +14,8 @@ config SUM_LOG
 
 endchoice
 
+config LAB_BME280
+	bool "Part 8 BME280 register temperature reader"
+	depends on I2C
+
 source "Kconfig.zephyr"

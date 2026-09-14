@@ -1,0 +1,10 @@
+/ {
+ mock_i2c: i2c-mock@10000000 {
+  compatible = "zephyr,i2c-emul-controller";
+  reg = <0x10000000 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  status = "okay";
+  #include "../../boards/bme280-node.dtsi"
+ };
+};

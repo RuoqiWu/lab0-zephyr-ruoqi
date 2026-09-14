@@ -1,0 +1,2 @@
+/* Reuse the application's direct TF-M boot layout for optional board tests. */
+#include "../../../boards/nrf7002dk_nrf5340_cpuapp_ns.overlay"

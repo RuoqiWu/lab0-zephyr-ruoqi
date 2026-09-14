@@ -6,6 +6,28 @@
 	};
 };
 
+&i2c1 {
+	status = "okay";
+	clock-frequency = <100000>;
+	pinctrl-0 = <&i2c1_default>;
+	pinctrl-1 = <&i2c1_sleep>;
+	pinctrl-names = "default", "sleep";
+	#include "bme280-node.dtsi"
+};
+
+&i2c1_default {
+	group1 {
+		psels = <NRF_PSEL(TWIM_SCL, 1, 14)>, <NRF_PSEL(TWIM_SDA, 1, 15)>;
+	};
+};
+
+&i2c1_sleep {
+	group1 {
+		psels = <NRF_PSEL(TWIM_SCL, 1, 14)>, <NRF_PSEL(TWIM_SDA, 1, 15)>;
+		low-power-enable;
+	};
+};
+
 /* This application boots TF-M directly, without MCUboot. */
 /delete-node/ &boot_partition;
 /delete-node/ &slot0_partition;
