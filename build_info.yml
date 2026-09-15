@@ -1,5 +1,0 @@
-cmake:
-  toolchain:
-    name: 'zephyr'
-    path: 'C:/ncs/toolchains/dcbdc366a1/opt/zephyr-sdk'
-version: '0.1.0'
