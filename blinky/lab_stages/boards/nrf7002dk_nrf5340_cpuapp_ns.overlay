@@ -1,0 +1,2 @@
+/* Share the already verified direct-boot layout and application aliases. */
+#include "../../boards/nrf7002dk_nrf5340_cpuapp_ns.overlay"

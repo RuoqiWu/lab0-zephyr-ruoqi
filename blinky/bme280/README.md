@@ -26,8 +26,8 @@ machine (previously COM16; USB re-enumeration changed the number). The original 
 From the repository root in an nRF Connect terminal:
 
 ```powershell
-west build -d blinky/build-part8 blinky -b nrf7002dk/nrf5340/cpuapp/ns --sysbuild
-west flash -d blinky/build-part8
+west build -d blinky/build_8_1 blinky -b nrf7002dk/nrf5340/cpuapp/ns --sysbuild
+west flash -d blinky/build_8_1
 ```
 
 Open Serial Monitor before reset. After about 5.5 seconds, the program prints
@@ -47,8 +47,8 @@ verify physical wiring or prove that the Nordic GPIOs are connected correctly.
 The hardware build separately resolves the actual I2C1/pinctrl configuration.
 
 ```powershell
-west build -d blinky/tests/BME280_TEST/build blinky/tests/BME280_TEST -b qemu_cortex_m3 --no-sysbuild -- "-DQEMU=D:/Program Files/qemu/qemu-system-arm.exe"
-west build -d blinky/tests/BME280_TEST/build -t run
+west build -d blinky/build_8_2 blinky/tests/BME280_TEST -b qemu_cortex_m3 --no-sysbuild -- "-DQEMU=D:/Program Files/qemu/qemu-system-arm.exe"
+west build -d blinky/build_8_2 -t run
 ```
 
 Take a screenshot of the actual PASS summary for 8.2. Use Ctrl+A then X if QEMU

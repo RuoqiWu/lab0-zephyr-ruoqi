@@ -1,0 +1,12 @@
+mainmenu "Lab 0 Parts 2 to 5"
+
+config LAB_BUTTON_DEMO
+	bool "Part 5: toggle LED2 on a button press"
+	default n
+
+config LAB_BLINK_INTERVAL_MS
+	int "Delay between LED toggles in milliseconds"
+	range 1 60000
+	default 2000
+
+source "Kconfig.zephyr"

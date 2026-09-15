@@ -1,0 +1,127 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Lab: Build question",
+      "type": "process",
+      "command": "C:/ncs/toolchains/dcbdc366a1/opt/bin/python.exe",
+      "args": [
+        "${workspaceFolder}/scripts/lab.py",
+        "${input:labQuestion}",
+        "build"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Lab: Flash hardware question",
+      "type": "process",
+      "command": "C:/ncs/toolchains/dcbdc366a1/opt/bin/python.exe",
+      "args": [
+        "${workspaceFolder}/scripts/lab.py",
+        "${input:labHardware}",
+        "flash"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Lab: Run QEMU question",
+      "type": "process",
+      "command": "C:/ncs/toolchains/dcbdc366a1/opt/bin/python.exe",
+      "args": [
+        "${workspaceFolder}/scripts/lab.py",
+        "${input:labTest}",
+        "run"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Lab: Part 4 menuconfig",
+      "type": "process",
+      "command": "C:/ncs/toolchains/dcbdc366a1/opt/bin/python.exe",
+      "args": [
+        "${workspaceFolder}/scripts/lab.py",
+        "4",
+        "menuconfig"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "labQuestion",
+      "type": "pickString",
+      "description": "Question to build",
+      "options": [
+        "2",
+        "2_original",
+        "3",
+        "4",
+        "5",
+        "6_printk",
+        "6_log",
+        "7",
+        "8_1",
+        "8_2"
+      ],
+      "default": "2"
+    },
+    {
+      "id": "labHardware",
+      "type": "pickString",
+      "description": "Question to flash onto the board",
+      "options": [
+        "2",
+        "2_original",
+        "3",
+        "4",
+        "5",
+        "6_printk",
+        "6_log",
+        "8_1"
+      ],
+      "default": "2"
+    },
+    {
+      "id": "labTest",
+      "type": "pickString",
+      "description": "QEMU test to run",
+      "options": [
+        "7",
+        "8_2"
+      ],
+      "default": "8_2"
+    }
+  ]
+}
